@@ -26,12 +26,20 @@ async function fetchGithub() {
     // filter algo
 
     const jrJobs = allJobs.filter(job =>{
-        const 
+        const jobTitle = job.title.toLowerCase();
+
+
+        // algo logic
+        if (jobTitle.includes('python') ||
+            jobTitle.includes('react'))       
+        return true;
     })
+
+    console.log('filtered down to ',jrJobs.length);
 
     // set in redis
     console.log('got', allJobs.length,'jobs total')
-    const success = await setAsync('github',JSON.stringify(allJobs));
+    const success = await setAsync('github',JSON.stringify(jrJobs));
     console.log({success})
 }
 
