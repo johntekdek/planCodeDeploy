@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -10,12 +10,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8pxx + 2vmin);
   color: white;
 }
 
@@ -38,10 +38,9 @@ body {
 
 .job {
   width: 80%;
-
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-
   margin: 20px 0;
   padding: 20px 10px;
   align-items: center;
@@ -49,6 +48,7 @@ body {
 
 .job:hover {
   cursor: pointer;
+  color:limegreen;
 }
 
 .job-company {
